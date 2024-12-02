@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "End the Doom Scroll",
+    "version": "1.0",
+    "description": "This Chrome extension helps you break the cycle of doom scrolling by automatically redirecting you from Instagram Reels, YouTube Shorts, or TikTok back to their main homepage, encouraging healthier browsing habits and better time management.",
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "tabs"
+    ],
+    "host_permissions": [
+      "*://www.instagram.com/reels/*",
+      "*://www.youtube.com/shorts/*",
+      "*://www.tiktok.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icons/end-the-doom-16.png",
+      "48": "icons/end-the-doom-48.png",
+      "128": "icons/end-the-doom-128.png"
+    }
+  }
+  
