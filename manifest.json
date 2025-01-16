@@ -4,7 +4,8 @@
     "version": "1.0",
     "description": "This Chrome extension helps you break the cycle of doom scrolling by automatically redirecting you from Instagram Reels, YouTube Shorts, or TikTok back to their main homepage, encouraging healthier browsing habits and better time management.",
     "permissions": [
-      "declarativeNetRequest"
+      "declarativeNetRequest",
+      "scripting"
     ],
     "host_permissions": [
       "*://www.instagram.com/reels/*",
@@ -14,6 +15,12 @@
     "background": {
       "service_worker": "background.js"
     },
+    "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+    ],
     "declarative_net_request": {
       "rule_resources": [
         {
